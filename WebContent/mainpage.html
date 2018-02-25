@@ -9,11 +9,34 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
 <script src="https://apis.google.com/js/client:plusone.js" type="text/javascript"></script>
-<script type="text/javascript">
-  gapi.load('auth2', function() {
-    // Library loaded.
+<script>
+function start() {
+	console.log("came")
+  // 2. Initialize the JavaScript client library.
+  gapi.client.init({
+    'apiKey': 'AIzaSyAMYkvdmY0vRhAHhibXpP4_HcJuCLOJp1o'
+  
+  }).then(function() {
+	  console.log("came2")
+    // 3. Initialize and make the API request.
+    return gapi.client.request({
+    	'path': 'https://maps.googleapis.com/maps/api/place/textsearch/json',
+  	  'params':{'query' : 'chicago',  'key' : 'AIzaSyAMYkvdmY0vRhAHhibXpP4_HcJuCLOJp1o'}
+    })
+  }).then(function(response) {
+	  console.log("came4")
+    console.log(response.result);
+  }, function(reason) {
+    console.log('Error: ' + reason.result.error.message);
   });
+};
+// 1. Load the JavaScript client library.
+function findlocation(location){
+	console.log("came1");
+gapi.load('client', start);}
 </script>
+
+
 </head>
 <body>
 <div id="heading">Local fun App</div>
