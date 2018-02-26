@@ -23,7 +23,7 @@ input{
 }
 button{
 	color:black;
-	width: 70px;
+	width: 90px;
 	height:30px;
 	background:#e6e6ff;
 	border:solid;
@@ -33,6 +33,7 @@ button{
 h3{
 	width:100%;
 }
+
 #main{
 	height: 860px;
 	border:solid;
@@ -43,14 +44,28 @@ h3{
 #sub{
 	margin-top: 20px;
 }
-#photo,#video{
+#pic{
+	height: 450px;
+	width:450px;
+}
+#photo{
 	margin-left: 20px;
 	margin-top: 5px;
 	border:solid;
-	width:620px;
+	width:500px;
 	height: 790px;
 	border-color:black;
 	display:inline-block;
+}
+#video{
+	margin-right: 100px;
+	margin-top: 5px;
+	border:solid;
+	width:500px;
+	height: 790px;
+	border-color:black;
+	display:inline-block;
+	float:right;
 }
 div.pgallery {
     margin: 5px;
