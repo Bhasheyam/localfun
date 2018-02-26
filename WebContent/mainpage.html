@@ -28,13 +28,13 @@
             function success(position) {
                 startPos = position;
 
-                var latitude = startPos.coords.latitude;
-                var longitude = startPos.coords.longitude;
+                var latitudepos = startPos.coords.latitude;
+                var longitudepos = startPos.coords.longitude;
 
-                output.innerHTML = 'Latitude is ' + latitude + '&#176; <br>Longitude is ' + longitude + '&#176;<br/>';
+                output.innerHTML = 'Latitude is ' + latitudepos + '&#176; <br>Longitude is ' + longitudepos + '&#176;<br/>';
 
             
-                output.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=12&size=400x400&key=AIzaSyDwY4vIaV02gDATW6SpU3YtjVhkGpE2yL0";
+                output.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitudepos + "," + longitudepos + "&zoom=12&size=400x400&key=AIzaSyDwY4vIaV02gDATW6SpU3YtjVhkGpE2yL0";
 
 
             };
